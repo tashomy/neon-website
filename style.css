@@ -5,8 +5,9 @@
 body {
   min-height: 100vh;
   background-color: #330033;
-  box-sizing: border-box;
+  box-sizing: border-box !important;
   margin: 0;
+  padding: 0;
   max-width: 100vw;
   overflow: hidden;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -33,7 +34,7 @@ body {
 .navbar ul {
   display: flex;
   /* width: 100vw; */
-  padding-inline-end: 5rem;
+  /* padding-inline-end: 5rem; */
   list-style: none !important;
   justify-content: flex-end !important;
   animation-name: scroll-second;
@@ -106,7 +107,7 @@ body {
 
 @keyframes scroll {
   from {
-    transform: translateX(2%);
+    transform: translateX(0%);
   }
   to {
     transform: translateX(50%);
@@ -121,3 +122,30 @@ body {
     transform: translateX(50%);
   }
 }
+
+@media (max-width: 1850px) {
+  .neon-button {
+    font-size: 2rem;
+  }
+  .nav-item {
+    margin-inline-start: 3rem;
+  }
+}
+@media (max-width: 1200px) {
+  .neon-button {
+    font-size: 1.6rem;
+  }
+  .nav-item {
+    margin-inline-start: 2rem;
+  }
+}
+@media (max-width: 935px) {
+  .neon-button {
+    font-size: 1.3rem;
+  }
+  .nav-item {
+    margin-inline-start: 0.5rem;
+  }
+}
+
+/* ispod 680px ide mobile navbar */
