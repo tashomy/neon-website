@@ -1,6 +1,6 @@
 :root {
-  --clr-neon: hsl(317 100% 54%);
-  --clr-light: hsl(317, 100%, 90%);
+  --clr-neon: hsl(317, 100%, 54%);
+  --clr-light: hsl(316, 100%, 90%);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
@@ -34,7 +34,7 @@ body {
 
 .navbarFirst {
   display: flex;
-  width: 100vw;
+  width: 100%;
   justify-content: flex-end;
   animation-name: scroll;
   animation-duration: 15s;
@@ -62,7 +62,7 @@ body {
 }
 
 .nav-item {
-  margin-inline-start: 5rem;
+  margin-inline-start: 6rem;
 }
 
 .neon-button {
@@ -236,6 +236,7 @@ body {
 
 .cards-wrap {
   /* margin-top: 5rem !important; */
+  z-index: 500 !important;
 }
 
 .card-item {
@@ -252,6 +253,7 @@ body {
   left: 0 !important;
   transition: transform 500ms ease;
   background: linear-gradient(transparent, black);
+  z-index: 13;
 }
 
 .card-content h3 {
@@ -264,6 +266,137 @@ body {
 
 .card-item:hover .card-content {
   transform: translateY(-50%);
+}
+
+/*SHOP*/
+
+#shop {
+  position: relative;
+  background-color: #fff;
+  color: #330033;
+  padding-top: 6rem;
+  padding-inline: 10%;
+  margin-inline: -10%;
+  z-index: 2;
+}
+
+.left-shop h2 {
+  font-size: 3.9rem;
+  margin-block: 2rem;
+}
+
+.left-shop p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.left-shop a {
+  text-decoration: none;
+  background-color: #330033;
+  color: var(--clr-light);
+  font-size: 1.6rem;
+  padding: 0.75em 1em;
+  border-radius: 100vw 100vw;
+  z-index: 30;
+  position: relative;
+  transition: padding 500ms ease;
+}
+
+.left-shop a:hover,
+.left-shop a:focus {
+  color: rgb(206, 9, 206);
+  padding: 2em;
+}
+
+.shop-wrap {
+  /* isolation: isolate; */
+  position: relative;
+  background: linear-gradient(
+    to right,
+    #fff 10%,
+    #ffccf1,
+    #ffc7e0,
+    #ffc8c2,
+    #ffd19e,
+    #ffe37e,
+    #ffe37e
+  );
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100%;
+  height: 65vh;
+}
+
+.sale {
+  background-color: var(--clr-neon);
+  width: 200px;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50px 50px 10px 50px;
+  margin-left: 6rem;
+  margin-top: 3rem;
+  z-index: 15;
+}
+
+.reach {
+  background-color: #330033;
+  color: #fff;
+  width: 230px;
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 3rem;
+  margin-left: 15%;
+  z-index: 15;
+}
+
+.reach h5 {
+  color: #dbd9d9;
+}
+
+.reach p {
+  font-size: 1.1rem;
+}
+
+.reach p span {
+  color: rgb(18, 184, 18);
+}
+
+.text-col {
+  position: absolute;
+  right: 3rem;
+  top: 0%;
+}
+
+#shop-icon {
+  width: 200px;
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  z-index: 10;
+}
+
+#woman-icon {
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  right: 10rem;
+  /* max-width: 700px; */
+  width: 60%;
+  z-index: 3;
+}
+
+.text-col p {
+  font-size: 1.2rem;
+  margin-block: 6rem;
+}
+
+.text-col p span {
+  font-size: 1.6rem;
+  font-weight: 700;
 }
 
 /* KEYFRAMES AND MEDIA QUERIES */
