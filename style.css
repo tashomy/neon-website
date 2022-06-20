@@ -1,16 +1,17 @@
 :root {
   --clr-neon: hsl(317, 100%, 54%);
   --clr-light: hsl(316, 100%, 90%);
+  --button-border: 0.125em;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&display=swap");
 
 ul {
-  padding: 0;
+  padding: 0 !important;
 }
 
 ul li {
-  padding: 0;
+  padding: 0 !important;
 }
 
 a {
@@ -33,6 +34,7 @@ body {
 }
 
 .navbarFirst {
+  margin-top: 2rem;
   display: flex;
   width: 100%;
   justify-content: flex-end;
@@ -40,18 +42,25 @@ body {
   animation-duration: 15s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+  margin-left: -3rem;
 }
 
 .navbar-second {
+  /* display: inline; */
+  /* border: 1px solid yellow; */
   position: absolute;
-  top: 2rem;
   left: -100%;
+  top: 2rem;
+  margin-right: 1rem !important;
+  /* animation-delay: 5s; */
+  /* margin-right: -100% !important; */
+  /* animation-delay: s; */
   /* margin-inline-end: 10rem; */
 }
 
 .navbarFirst ul {
   display: flex;
-  /* width: 100vw; */
+  width: 100%;
   /* padding-inline-end: 5rem; */
   list-style: none !important;
   justify-content: flex-end !important;
@@ -72,7 +81,7 @@ body {
   padding: 0.35em 1.25em;
   text-decoration: none;
   color: var(--clr-neon);
-  border: 0.125em solid var(--clr-neon);
+  border: var(--button-border) solid var(--clr-neon);
   border-radius: 0.25em;
 
   text-shadow: 0 0 0.125em hsl(0 0% 100% / 0.75), 10px 0 2em currentColor;
@@ -125,6 +134,27 @@ body {
 
 .neon-button:hover::after {
   opacity: 0.7;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes scroll-second {
+  0% {
+    left: 0px;
+  }
+  50% {
+    left: 100vh;
+  }
+  100% {
+    left: 0px;
+  }
 }
 
 /* NAVBAR FINISHED MAIN CONTAINER STARTING */
@@ -609,24 +639,6 @@ body {
 }
 
 /* KEYFRAMES AND MEDIA QUERIES */
-
-@keyframes scroll {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(50%);
-  }
-}
-
-@keyframes scroll-second {
-  from {
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(50%);
-  }
-}
 
 @media (max-width: 1850px) {
   .neon-button {
